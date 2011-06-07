@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<plug-in>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><plug-in>
     <name>folderlisting</name>
     <class>fr.paris.lutece.plugins.folderlisting.service.FolderListingPlugin</class>
     <version>2.1.1</version>
-    <documentation></documentation>
-    <installation></installation>
-    <changes></changes>
-    <user-guide></user-guide>
+    <documentation/>
+    <installation/>
+    <changes/>
+    <user-guide/>
     <description>folderlisting.plugin.description</description>
     <provider>folderlisting.plugin.provider</provider>
     <provider-url>http://lutece.paris.fr</provider-url>
@@ -14,7 +13,7 @@
     <copyright>Copyright 2001-2011 Mairie de Paris</copyright>
     <core-version-dependency>
         <min-core-version>2.3.0</min-core-version>
-        <max-core-version></max-core-version>
+        <max-core-version/>
     </core-version-dependency>
     <db-pool-required>1</db-pool-required>
 
@@ -50,8 +49,8 @@
             <portlet-modify-script-template>/admin/portlet/script_modify_portlet.html</portlet-modify-script-template>
             <portlet-create-specific-template>/admin/plugins/folderlisting/portlet/create_folderlisting.html</portlet-create-specific-template>
             <portlet-modify-specific-template>/admin/plugins/folderlisting/portlet/modify_folderlisting.html</portlet-modify-specific-template>
-            <portlet-create-specific-form-template></portlet-create-specific-form-template>
-            <portlet-modify-specific-form-template></portlet-modify-specific-form-template>
+            <portlet-create-specific-form-template/>
+            <portlet-modify-specific-form-template/>
         </portlet>
     </portlets>
 
