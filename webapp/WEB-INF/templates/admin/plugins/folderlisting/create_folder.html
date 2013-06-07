@@ -1,28 +1,36 @@
-<div class="content-box" >
-    
-    <h2>#i18n{folderlisting.create_folder.tableLabel}</h2>
-    
-<form method="post" form name="create_folder" id="create_folder" action="jsp/admin/plugins/folderlisting/DoCreateFolder.jsp">
-        
-        <p>
-            <label for="folder_name" >#i18n{folderlisting.create_folder.rowTitleName} * : </label> 
-            <input type="text" id="folder_name" name="folder_name" size="60" maxlength="50" tabindex="1" />
-        </p>
-        
-        <p>
-            <label for="folder_path" >#i18n{folderlisting.create_folder.rowTitlePath} * :</label>  
-            <input type="text" id="folder_path" name="folder_path" size="60" maxlength="200" tabindex="2" />
-        </p>
-        <p>
-            <label for="folder_workgroup" >#i18n{folderlisting.create_folder.rowTitleWorkgroup} * :</label>  
-			<@combo name="folder_workgroup" default_value="" items=workgroup_list />
-        </p>
-        
-        
-        <p>   
-            <input type="submit" value="#i18n{folderlisting.create_folder.buttonValidate}" class="button" tabindex="3" />
-        </p>
-        
-    </form>
-    
+<div class="row-fluid" >
+	<div class="span12" >
+		<fieldset>
+		<legend>#i18n{folderlisting.create_folder.tableLabel} </legend>
+			<form class="form-horizontal" method="post" name="create_folder" id="create_folder"  action="jsp/admin/plugins/folderlisting/DoCreateFolder.jsp">
+			<div class="control-group">
+			<label class="control-label" for="folder_name" >#i18n{folderlisting.create_folder.rowTitleName} * </label> 
+				<div class="controls">
+					<input type="text" id="folder_name" name="folder_name" class="input-large" maxlength="50" value="" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="folder_path" >#i18n{folderlisting.create_folder.rowTitlePath} * </label>  
+				<div class="controls">
+					<input type="text" id="folder_path" name="folder_path" class="input-large" maxlength="200" value="" tabindex="2" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="folder_workgroup" >#i18n{folderlisting.create_folder.rowTitleWorkgroup} * </label>  
+				<div class="controls">
+					<@comboWithParams name="folder_workgroup" default_value="" additionalParameters=" class=\"input-normal\"" items=workgroup_list />
+				</div>
+			</div>
+			<div class="form-actions">
+				<button class="btn btn-primary btn-small" type="submit">
+					<i class="icon-ok icon-white"></i>&nbsp;#i18n{folderlisting.create_folder.buttonValidate}
+				</button>
+				<a class="btn btn-small" href="jsp/admin/plugins/folderlisting/ManageFolders.jsp?plugin_name=folderlisting">
+					<i class="icon-remove-circle"></i>&nbsp;#i18n{folderlisting.confirm_remove_folder.buttonCancel}
+				</a>
+			</div>
+			</form>
+		</fieldset>
+    </div>
 </div>
+

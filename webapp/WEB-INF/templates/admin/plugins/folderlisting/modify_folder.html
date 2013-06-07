@@ -1,24 +1,36 @@
-<div class="content-box">
-    <h2>#i18n{folderlisting.modify_folder.tableLabel} ${folder.folderName}</h2>
-    <div>
-     <form method="post" orm  action="jsp/admin/plugins/folderlisting/DoModifyFolder.jsp">
-            <p>
-                <label for="folder_name" >#i18n{folderlisting.modify_folder.rowTitleName} * : </label> 
-                <input type="text" id="folder_name" name="folder_name" size="60" maxlength="50" value="${folder.folderName}" tabindex="1" />
-            </p>
-            
-            <p>
-                <label for="folder_path" >#i18n{folderlisting.modify_folder.rowTitlePath} * :</label>  
-                <input type="text" id="folder_path" name="folder_path" size="60" maxlength="200" value="${folder.folderPath}" tabindex="2" />
-            </p>
-	        <p>
-	            <label for="folder_workgroup" >#i18n{folderlisting.modify_folder.rowTitleWorkgroup} * :</label>  
-				<@combo name="folder_workgroup" default_value="${folder.workgroup}" items=workgroup_list />
-	        </p>
-            
-            <input type="hidden" name="id_folder" value="${folder.id}" />
-            <input type="submit" value="#i18n{folderlisting.modify_folder.buttonModify}" class="button" tabindex="3" />
-        </form>
+<div class="row-fluid" >
+	<div class="span12" >
+		<fieldset>
+		<legend>#i18n{folderlisting.modify_folder.tableLabel} ${folder.folderName}</legend>
+			<form class="form-horizontal" method="post" orm  action="jsp/admin/plugins/folderlisting/DoModifyFolder.jsp">
+			<input type="hidden" name="id_folder" value="${folder.id}" />
+			<div class="control-group">
+				<label class="control-label" for="folder_name" >#i18n{folderlisting.modify_folder.rowTitleName} * : </label> 
+				<div class="controls">
+					<input type="text" id="folder_name" name="folder_name" size="60" maxlength="50" value="${folder.folderName}" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="folder_path" >#i18n{folderlisting.modify_folder.rowTitlePath} * :</label>  
+				<div class="controls">
+					<input type="text" id="folder_path" name="folder_path" size="60" maxlength="200" value="${folder.folderPath}" tabindex="2" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="folder_workgroup" >#i18n{folderlisting.modify_folder.rowTitleWorkgroup} * :</label>  
+				<div class="controls">
+					<@combo name="folder_workgroup" default_value="${folder.workgroup}" items=workgroup_list />
+				</div>
+			</div>
+			<div class="form-actions">
+				<button class="btn btn-primary btn-small" type="submit">
+					<i class="icon-ok icon-white"></i>&nbsp;#i18n{folderlisting.modify_folder.buttonModify}
+				</button>
+				<a class="btn btn-small" href="jsp/admin/plugins/folderlisting/ManageFolders.jsp?plugin_name=folderlisting">
+					<i class="icon-remove-circle"></i>&nbsp;#i18n{folderlisting.confirm_remove_folder.buttonCancel}
+				</a>
+			</div>
+			</form>
+		</fieldset>
     </div>
 </div>
-
